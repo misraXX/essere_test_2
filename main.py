@@ -18,9 +18,9 @@ import time
     
 if __name__ == "__main__":
     options = webdriver.ChromeOptions()
-    options.add_argument('--disable-blink-features=AutomationControlled')
     options.add_argument('–headless')
-    options.add_argument('–no-sandbox')
+#    options.add_argument('--disable-blink-features=AutomationControlled')
+#    options.add_argument('–no-sandbox')
     driver = webdriver.Chrome(options=options)
     driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
     driver.get('https://secure.louisvuitton.com/jpn-jp/mylv/overview')
