@@ -30,6 +30,8 @@ jobs:
           python -m pip install --upgrade pip
           # 必要なパッケージインストール
           pip install line-bot-sdk
+          pip install selenium
+
       - name: Run script
         run: |
           # main.pyの実行
