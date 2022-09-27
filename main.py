@@ -19,6 +19,8 @@ import time
 if __name__ == "__main__":
     options = webdriver.ChromeOptions()
     options.add_argument('--disable-blink-features=AutomationControlled')
+    options.add_argument('–headless')
+    options.add_argument('–no-sandbox')
     driver = webdriver.Chrome(options=options)
     driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
     driver.get('https://secure.louisvuitton.com/jpn-jp/mylv/overview')
@@ -31,7 +33,7 @@ if __name__ == "__main__":
     driver.find_element(By.CSS_SELECTOR,'#passwordloginForm').send_keys(password)
     driver.find_element(By.CSS_SELECTOR,'#loginSubmit_').click()
     #ほしい商品の入荷状況を確認
-    url = "https://jp.louisvuitton.com/jpn-jp/products/pochette-voyage-epi-nvprod3660137v/M81326"
+    url = "https://jp.louisvuitton.com/jpn-jp/products/neverfull-mm-monogram-empreinte-nvprod2790031v/M46135"
     driver.get(url)
     #指定した要素がクリックできる状態になるまで待機
     time.sleep(5)
