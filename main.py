@@ -18,8 +18,8 @@ import time
     
 if __name__ == "__main__":
     options = webdriver.ChromeOptions()
-    options.add_argument('–headless')
-#    options.add_argument('--disable-blink-features=AutomationControlled')
+    options.add_argument('–headless','--disable-blink-features=AutomationControlled','–no-sandbox')
+#    options.add_argument()
 #    options.add_argument('–no-sandbox')
     driver = webdriver.Chrome(options=options)
     driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
