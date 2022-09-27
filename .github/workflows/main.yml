@@ -31,7 +31,6 @@ jobs:
           # 必要なパッケージインストール
           pip install line-bot-sdk
           pip install selenium
-          pip install chromedriver-binary==76.0.3809.132
 
       - name: Run script
         run: |
