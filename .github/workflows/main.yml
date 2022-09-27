@@ -11,8 +11,6 @@ on:
 #  schedule:
 #    - cron: '0 22 * * *'
 
-on:
-on:
 jobs:
   build:
     # Ubuntuの最新版環境内で処理を実行することを指定
